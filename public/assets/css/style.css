@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Circular Bold Medium';
+    src: URL('../fonts/CircularStd-Regular.otf') format('truetype');
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.user-donation-card .dateDonation {
+    position: absolute; 
+    right: 20px; 
+    top: 10px; 
+    font-weight: 600; 
+    color: #ff813f;
+}
+
+.user-donation-card .user-avatar {
+    width: 48px; height: 48px; margin-right: 10px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.user-donation-card .comment {
+    margin-left: 60px; 
+    background-color: #fff9f5; 
+    border: 2px solid #ffe6d8;
+}
+
+#ranking-donations .value-donation {
+    right: 10px; position: absolute;
+}
+
+.bg-yellow {
+    background: #ffdd00;
+}
+
+.bg-soft-yellow {
+    background: #fffce6;
+}
+
+.bg-orange {
+    background-color: #f8ae33;
+}
+
+.font-helvetica {
+    font-family: Arial, Helvetica, Tahoma, Verdana;
+}
+
+.font-circular-medium {
+    font-family: 'Circular Bold Medium';
+}
