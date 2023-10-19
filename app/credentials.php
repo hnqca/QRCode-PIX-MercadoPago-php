@@ -1,8 +1,8 @@
 <?php
 
+    // https://www.mercadopago.com.br/developers/pt/docs/credentials
     const MERCADO_PAGO_CONFIG = [
-         // https://www.mercadopago.com.br/developers/pt/docs/credentials
-        "access_token"     => "YOUR_ACCESS_TOKEN",
+        "access_token"     => "SEU_ACCESS_TOKEN",
         "notification_url" => "https://example.com/payment/notification.php"
     ];
 
