@@ -11,7 +11,7 @@
 ## Demonstração:
 
 <div align="center">
-    <img width="80%" src="_readme/demo.gif" />
+    <img width="100%" src="_readme/demo.gif" />
 </div>
 
 ---
@@ -47,6 +47,14 @@ O objetivo deste projeto é permitir doações para uma pessoa ou projeto, sem a
     <img width="350" src="https://i.ibb.co/ck9S6wp/ranking-donation2.png" /><br>
 </div>
 
+<hr>
+
+<div align="center">
+    <p>Em  <a href="https://www.mercadopago.com.br/home">"Sua atividade"</a> do Mercado Pago, você verá a doação do usuário    apresentada de forma semelhante a isto:</p>
+    <img src="_readme/app_mp.jpeg" /><br>
+    <img width="700" src="_readme/app_mp2.jpeg" /><br>
+</div>
+    
 
 ---
 
@@ -64,55 +72,42 @@ Além disso, é necessário definir a <b>"NOTIFICATION_URL"</b>, que é a URL on
 ---
 
 
+## 🔑 Mercado Pago (ACCESS TOKEN)
 <details>
-  <summary><h2>Mercado Pago (ACCESS TOKEN)</h2>
-  <p>Criando o Access Token e definindo a URL de notificações.</p>
-  </summary>
-  <ol><br>
-    <li>
-      <b>Criando uma aplicação.</b>
-      <p>Acesse <a href="https://www.mercadopago.com.br/developers/panel/app">https://www.mercadopago.com.br/developers/panel/app</a> enquanto estiver conectado à sua conta no Mercado Pago e crie uma nova aplicação.</p><br>
-      <ul>
-        <p align="center">
-          <img src="_readme/mp/mp_step_01.png">
-        </p>
-      </ul>
-    </li>
-    <li>
-      <b>Dados da Aplicação</b>
-      <p>Personalize os detalhes da sua aplicação de acordo com suas preferências. Exemplo utilizado para este projeto:</p><br>
-        <p align="center">
-          <img src="_readme/mp/mp_step_02.png">
-        </p><br>
-      </ul>
-    </li>
-    <li>
-      <b>Acessando sua Aplicação</b>
-      <p>Depois de ter criado a aplicação, retorne às <a href="https://www.mercadopago.com.br/developers/panel/app">suas integrações</a> e acesse a aplicação que acabou de ser criada.</p><br>
-        <p align="center">
-          <img src="_readme/mp/mp_step_03.png">
-        </p><br>
-        <p>Acesse <b>"credenciais de produção"</b></p><br>
-        <p align="center">
-          <img src="_readme/mp/mp_step_04.png">
-        </p><br>
-    </li>
-    <li>
-      <b>Salve o seu Access Token.</b>
-      <p>Copie o seu Access Token de produção e insira-o no arquivo "<b><a href="https://github.com/HenriqueCacerez/QRCode-PIX-MercadoPago-php/blob/main/app/credentials.php">app/credentials.php</a></b>".</p><br>
-       <p align="center">
-          <img src="_readme/mp/mp_step_05.png">
-        </p>
-    </li>
-    <hr>
-    <h4>Exemplo:</h4>
+  <summary><strong>Clique aqui</strong> para ver como obter o seu access token</summary>
 
-```php
-    const MERCADO_PAGO_CONFIG = [
-        "access_token"     => "SEU_ACCESS_TOKEN",
-        "notification_url" => "https://example.com/payment/notification.php"
-    ];
-```
+  ### 1. Criando uma Aplicação:
+  Acesse [https://www.mercadopago.com.br/developers/panel/app](https://www.mercadopago.com.br/developers/panel/app) e crie uma nova aplicação.
 
-  </ol>
+  <div align="center">
+      <img src="_readme/mp/mp_step_01.png">
+  </div>
+
+  ### 2. Dados da Aplicação:
+  Exemplo:
+
+  <div align="center">
+    <img src="_readme/mp/mp_step_02.png">
+  </div>
+
+  ### 3. Acessando sua Aplicação:
+  Depois de ter criado a aplicação, retorne às [suas integrações](https://www.mercadopago.com.br/developers/panel/app) e acesse a aplicação que acabou de ser criada.
+
+  <div align="center">
+    <img src="_readme/mp/mp_step_03.png">
+  </div>
+
+   ### 4. Credenciais de Produção:
+
+  <div align="center">
+    <img src="_readme/mp/mp_step_04.png">
+  </div>
+
+  ### 5. Salve o seu Access Token:
+  Copie o seu Access Token de produção e insira-o no arquivo [app/credentials.php](https://github.com/HenriqueCacerez/QRCode-PIX-MercadoPago-php/blob/main/app/credentials.php)
+
+  <div align="center">
+    <img src="_readme/mp/mp_step_05.png">
+  </div>
+
 </details>
