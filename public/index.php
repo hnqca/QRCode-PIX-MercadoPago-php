@@ -1,17 +1,26 @@
 <?php
     require_once __DIR__ . '/../app/config.php';
 
-    // Ranking
-    $query = "SELECT value, nickname FROM donations WHERE status = 'approved' ORDER BY value DESC LIMIT 4";
-    $stmt  = $pdo->prepare($query);
-    $stmt->execute();
-    $rankingDonations = $stmt->fetchAll(\PDO::FETCH_ASSOC) ?? null;
+    function getRankingDonations($donations = null)
+    {
+        if (!$donations) {
+            return [];
+        }
+    
+        usort($donations, function($a, $b) {
+            return $b['value'] / $a['value'];
+        });
+        
+        return array_slice($donations, 0, 5);
+    }
 
     // Donations
     $query = "SELECT value, nickname, message, updated_at FROM donations WHERE status = 'approved' ORDER BY updated_at DESC";
     $stmt  = $pdo->prepare($query);
     $stmt->execute();
-    $recentDonations = $stmt->fetchAll(\PDO::FETCH_ASSOC) ?? null;
+
+    $recentDonations  = $stmt->fetchAll(\PDO::FETCH_ASSOC) ?? null;
+    $rankingDonations = getRankingDonations( $recentDonations );
 ?>
 
 <!DOCTYPE html>
